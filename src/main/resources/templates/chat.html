@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+<!--    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>-->
+<!--    <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.3"></script>-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style>
+        /* Указываем box sizing */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        /* Убираем внутренние отступы */
+        ul[class],
+        ol[class] {
+            padding: 0;
+        }
+
+        /* Убираем внешние отступы */
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        p,
+        ul[class],
+        ol[class],
+        li,
+        figure,
+        figcaption,
+        blockquote,
+        dl,
+        dd {
+            margin: 0;
+        }
+
+        /* Выставляем основные настройки по-умолчанию для body */
+        body {
+            min-height: 100vh;
+            scroll-behavior: smooth;
+            text-rendering: optimizeSpeed;
+            line-height: 1.5;
+        }
+
+        /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+        ul[class],
+        ol[class] {
+            list-style: none;
+        }
+
+        /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+        a:not([class]) {
+            text-decoration-skip-ink: auto;
+        }
+
+        /* Упрощаем работу с изображениями */
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* Указываем понятную периодичность в потоке данных у article*/
+        article > * + * {
+            margin-top: 1em;
+        }
+
+        /* Наследуем шрифты для инпутов и кнопок */
+        input,
+        button,
+        textarea,
+        select {
+            font: inherit;
+        }
+
+    </style>
+</head>
+<body>
+<!--/*@thymesVar id="userInfo" type="ru.nsu.fit.chat.dto.UserInfoDto"*/-->
+<!--    <p th:text="'Hello, ' + ${userInfo.username} + '!'"></p>-->
+    <div id="app">
+    </div>
+
+
+<!--    <form th:action="@{/logout}" method="post" class="form-signout">-->
+<!--        <input type="submit" value="Sign Out"/>-->
+<!--    </form>-->
+    <script th:inline="javascript">
+        let userInfo = [[${userInfo}]]
+    </script>
+    <!--/*@thymesVar id="isDevMode" type="boolean"*/-->
+    <script th:src="${isDevMode} ? 'http://localhost:8000/main.js' : '/js/main.js'"></script>
+<!--    <script src="/js/script.js"></script>-->
+</body>
+</html>
