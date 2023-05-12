@@ -1,0 +1,82 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 6px;
+
+    background: rgba(150, 125, 110, 0.9);
+    height: 34px;
+    width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.chat-name-lbl{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #FFFFFF;
+}
+
+.sign-in-button{
+    width: 72px;
+    height: 24px;
+
+    background: #CCBFB4;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.sign-in-panel{
+    display: flex;
+    justify-content: center;
+
+    width: 580px;
+    height: 386px;
+
+    background: #CCBFB4;
+    margin-left: auto;
+    margin-right: auto;
+    /*border: 1px solid #000000;*/
+}
+
+.sign-in-panel-items{
+    margin-top: 102px;
+}
+
+.sign-in-panel-text {
+    text-align: center;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+
+    color: rgba(0, 0, 0, 0.75);
+}
+
+.input{
+    width: 160px;
+    height: 28px;
+
+    background: #FFFFFF;
+    border-radius: 10px;
+    border-width: 0;
+}
+
+.sign-up-btn{
+    width: 160px;
+    height: 28px;
+
+    margin-top: 15px;
+    background: rgba(166, 155, 146, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    border-radius: 10px;
+}
